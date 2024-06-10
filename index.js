@@ -1,27 +1,32 @@
-const nome = "beatriz";
+const btb = document.querySelector("#send");
 
-const xp = 5000;
+btb.addEventListener("click", function (e) {
+    e.preventDefault();
 
-let nivel = "";
+    let nameInput = document.querySelector("#name").value;
 
+    let pointsInput = document.querySelector("#points").value;
 
-if (xp < 1000) {
-    nivel = "Ferro";
-} else if (xp >= 1001 && xp <= 2000) {
-    nivel = "Bronze";
-} else if (xp >= 2001 && xp <= 5000) {
-    nivel = "Prata";
-} else if (xp >= 5001 && xp <= 7000) {
-    nivel = "Ouro";
-} else if (xp >= 7001 && xp <= 8000) {
-    nivel = "Platina";
-} else if (xp >= 8001 && xp <= 9000) {
-    nivel = "Ascendente";
-} else if (xp >= 9001 && xp <= 10000) {
-    nivel = "Imortal";
-} else if (xp >= 10001) {
-    nivel = "Radiante";
-}
+    let level = "";
 
-console.log(`O Herói de nome ${nome} está no nível de ${nivel}`);
+    if (pointsInput < 1000) {
+        level = "Ferro";
+    } else if (pointsInput >= 1001 && pointsInput <= 2000) {
+        level = "Bronze";
+    } else if (pointsInput >= 2001 && pointsInput <= 5000) {
+        level = "Prata";
+    } else if (pointsInput >= 5001 && pointsInput <= 7000) {
+        level = "Ouro";
+    } else if (pointsInput >= 7001 && pointsInput <= 8000) {
+        level = "Platina";
+    } else if (pointsInput >= 8001 && pointsInput <= 9000) {
+        level = "Ascendente";
+    } else if (pointsInput >= 9001 && pointsInput <= 10000) {
+        level = "Imortal";
+    } else if (pointsInput >= 10001) {
+        level = "Radiante";
+    }
 
+    const mostrar = document.querySelector("#mostrar");
+    mostrar.innerHTML = `O Herói de nome ${nameInput} está no nível de ${level}`;
+});
