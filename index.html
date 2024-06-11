@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dio</title>
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <header class="header-container">
-            <h1>Personagens e níveis</h1>
-        </header>
-        <div>
-            <input type="text" id="name" placeholder="Digite o nome do personagem">
-        </div>
-        <div>
-            <input type="text" id="points" placeholder="Digite a quantidade de pontos">
-        </div>
-        <input type="submit" id="send"  value="enviar">
-    </form>
-    <h2 id="mostrar"></h2>
+    <header>
+        <h1>Personagens e Níveis</h1>
+    </header>
+    <section class="pn-container pn-section-container">
+        <form class="pn-form">
+            <div class="pn-input">
+                <input type="text" id="name" placeholder="Digite o nome do personagem">
+            </div>
+            <div class="pn-input">
+                <input type="text" id="points" placeholder="Digite a quantidade de pontos">
+            </div>
+            <input class="pn-submit" type="submit" id="send"  value="Enviar">
+            <h2 id="mostrar" ></h2>
+        </form>
+        
+    </section>
+    <footer>
+            <h3>Desenvolvido por Leandro</h3>
+    </footer>
 </body>
 </html>
